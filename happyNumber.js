@@ -29,7 +29,7 @@ Requirements:
 function isHappy(num) {
     const hash = new Set(); // Stores previously seen numbers to detect cycles
 
-    while (num !== 1 && !seen.has(num)) {
+    while (num !== 1 && !hash.has(num)) {
         hash.add(num);        // Mark current number as seen
         num = getNext(num);     // Get the sum of squares of digits
     }
